@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finance Automatisering met AI | AI Volution</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="AI Volution automatiseert je finance: factuurverwerking, incasso-opvolging en cashflow monitoring. Snellere cashflow, minder fouten. Plan een gratis scan.">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="canonical" href="https://ai-volution.nl/automate-finance.html">
+  <link rel="alternate" hreflang="nl-NL" href="https://ai-volution.nl/automate-finance.html">
+  <meta property="og:title" content="Finance Automatisering met AI | AI Volution">
+  <meta property="og:description" content="AI Volution automatiseert je finance: factuurverwerking, incasso-opvolging en cashflow monitoring. Snellere cashflow, minder fouten. Plan een gratis scan.">
+  <meta property="og:image" content="https://ai-volution.nl/assets/logo-licht.png">
+  <meta property="og:url" content="https://ai-volution.nl/automate-finance.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="nl_NL">
+  <meta property="og:site_name" content="AI Volution">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Finance Automatisering met AI | AI Volution">
+  <meta name="twitter:description" content="AI Volution automatiseert je finance: factuurverwerking, incasso-opvolging en cashflow monitoring. Snellere cashflow, minder fouten. Plan een gratis scan.">
+  <meta name="twitter:image" content="https://ai-volution.nl/assets/logo-licht.png">
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container">
+      <a href="index.html" class="navbar-logo"><img src="assets/logo-licht.png" alt="AI Volution" style="height:28px;"></a>
+      <ul class="navbar-links">
+        <li><a href="diensten.html" class="active">Diensten</a></li>
+        <li><a href="branches.html">Branches</a></li>
+        <li><a href="over-ons.html">Over ons</a></li>
+        <li><a href="aanpak.html">Aanpak</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="#" class="navbar-cta" onclick="openScanModal();return false;">Gratis Consult</a>
+      <button class="menu-toggle" onclick="this.closest('.navbar').querySelector('.navbar-links').classList.toggle('show')">&#9776;</button>
+    </div>
+  </nav>
+
+  <div class="page-wrapper">
+    <canvas id="ribbonCanvas" class="page-canvas"></canvas>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero hero-finance">
+      <div class="container">
+        <span class="hero-emoji" aria-hidden="true">&#128176;</span>
+        <div class="section-eyebrow">Finance Automatisering</div>
+        <h1>Professionele Finance Automatisering</h1>
+        <p>AI Volution automatiseert financiele processen voor Nederlandse bedrijven. Van factuurverwerking tot incasso-opvolging - onze AI Workforces zorgen voor snellere cashflow, minder handmatig werk en volledige controle over je debiteurenbeheer.</p>
+        <div class="hero-badge"><span class="badge-icon">&#9989;</span> 0 gemiste betalingen</div>
+      </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <section class="marquee">
+      <div class="marquee-track">
+        <span class="marquee-text">FACTUURVERWERKING</span><div class="marquee-sep"></div>
+        <span class="marquee-text ghost">INCASSO</span><div class="marquee-sep"></div>
+        <span class="marquee-text">CASHFLOW</span><div class="marquee-sep"></div>
+        <span class="marquee-text ghost">CREDIT NOTA'S</span><div class="marquee-sep"></div>
+        <span class="marquee-text">FACTUURVERWERKING</span><div class="marquee-sep"></div>
+        <span class="marquee-text ghost">INCASSO</span><div class="marquee-sep"></div>
+        <span class="marquee-text">CASHFLOW</span><div class="marquee-sep"></div>
+        <span class="marquee-text ghost">CREDIT NOTA'S</span><div class="marquee-sep"></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- VERTROUWD DOOR -->
+  <section class="klanten reveal">
+    <div class="container">
+      <div class="klanten-inner">
+        <div class="klanten-label">Vertrouwd door</div>
+        <div class="klanten-divider"></div>
+        <div class="klanten-scroll">
+          <div class="klanten-track">
+            <img src="assets/klanten/easystorage.png" alt="easyStorage" style="height:22px;">
+            <img src="assets/klanten/fundingteam.png" alt="Fundingteam" style="height:90px;">
+            <img src="assets/klanten/motul.png" alt="Motul" style="height:40px;">
+            <img src="assets/klanten/lassoo-ariaans.svg" alt="Lassoo Ariaans" style="height:32px;">
+            <!-- ISS logo: herplaats als <img src="assets/klanten/iss.png" alt="ISS" style="height:38px;"> -->
+            <img src="assets/klanten/endeavour.webp" alt="Endeavour" style="height:22px;">
+            <img src="assets/klanten/minerva.png" alt="Minerva Development" style="height:22px;">
+            <img src="assets/klanten/tis.png" alt="TIS" style="height:24px;">
+            <img src="assets/klanten/easystorage.png" alt="easyStorage" style="height:22px;">
+            <img src="assets/klanten/fundingteam.png" alt="Fundingteam" style="height:90px;">
+            <img src="assets/klanten/motul.png" alt="Motul" style="height:40px;">
+            <img src="assets/klanten/lassoo-ariaans.svg" alt="Lassoo Ariaans" style="height:32px;">
+            <img src="assets/klanten/endeavour.webp" alt="Endeavour" style="height:22px;">
+            <img src="assets/klanten/minerva.png" alt="Minerva Development" style="height:22px;">
+            <img src="assets/klanten/tis.png" alt="TIS" style="height:24px;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE INTRO -->
+  <section class="service-intro reveal">
+    <div class="container">
+      <div class="section-eyebrow">Oplossingen</div>
+      <h2 class="section-title">Complete Finance Automatisering Oplossingen</h2>
+      <p>AI Volution biedt 6 gespecialiseerde finance automatisering modules. Van factuurherkenning tot incasso-opvolging - we automatiseren het meest tijdrovende proceswerk zodat je finance team zich kan richten op strategie en analyse.</p>
+    </div>
+  </section>
+
+  <!-- MODULE CARDS -->
+  <section class="grid-diagonal">
+    <div class="container">
+      <div class="dienst-cards">
+        <div class="dienst-card reveal">
+          <div class="dienst-num">01</div>
+          <h3>Factuurverwerking & Scan-en-Herken</h3>
+          <div class="dienst-sub-text">Van papier naar boekhouding zonder tussenkomst</div>
+          <p>Handmatig facturen invoeren, controleren op fouten en koppelen aan inkooporders kost uren per dag. Onze AI scant, herkent en verwerkt inkomende facturen volledig automatisch.</p>
+          <ul>
+            <li>OCR-scanning van inkomende facturen en documenten</li>
+            <li>Automatische controle op juistheid en duplicaten</li>
+            <li>Koppeling aan inkooporders en contracten</li>
+            <li>Classificatie en routing naar juiste goedkeurder</li>
+          </ul>
+          <div class="module-result">Resultaat: 95% minder handmatige invoer, geen fouten meer, facturen verwerkt binnen minuten in plaats van dagen.</div>
+        </div>
+        <div class="dienst-card reveal">
+          <div class="dienst-num">02</div>
+          <h3>Debiteurenbeheer & Incasso</h3>
+          <div class="dienst-sub-text">Directe opvolging bij openstaande posten</div>
+          <p>Openstaande facturen handmatig nabellen kost tijd en levert frustratie op. Onze AI neemt direct contact op met debiteuren via voice, WhatsApp of e-mail zodra een betaling uitblijft.</p>
+          <ul>
+            <li>Automatische detectie van verlopen betaaltermijnen</li>
+            <li>Opvolging via voice, WhatsApp en e-mail</li>
+            <li>Escalatieflows bij herhaaldelijk niet-betalen</li>
+            <li>Realtime overzicht van alle openstaande posten</li>
+          </ul>
+          <div class="module-result">Resultaat: DSO (Days Sales Outstanding) verlaagd, directe opvolging in plaats van weken wachten, geen handmatig belwerk meer.</div>
+        </div>
+        <div class="dienst-card reveal">
+          <div class="dienst-num">03</div>
+          <h3>Betalingsbewaking & Cashflow</h3>
+          <div class="dienst-sub-text">Grip op elke euro die binnenkomt en uitgaat</div>
+          <p>Gefaalde incasso's en gemiste betalingen worden vaak pas na dagen ontdekt. Onze AI monitort alle betalingsstromen realtime en grijpt direct in bij afwijkingen.</p>
+          <ul>
+            <li>Realtime monitoring van alle betalingsstromen</li>
+            <li>Directe alerts bij gefaalde incasso's of chargebacks</li>
+            <li>Automatische herincasso en betalingsherinneringen</li>
+            <li>Cashflow forecasting op basis van openstaande posten</li>
+          </ul>
+          <div class="module-result">Resultaat: Geen gefaalde betalingen meer die dagen onopgemerkt blijven, verbeterde cashflow voorspelbaarheid.</div>
+        </div>
+        <div class="dienst-card reveal">
+          <div class="dienst-num">04</div>
+          <h3>Credit Nota & Retour Financien</h3>
+          <div class="dienst-sub-text">Van claim tot creditering zonder handmatig werk</div>
+          <p>Credit nota's opvolgen, retourfinancien verwerken en leveranciers aanschrijven voor terugbetalingen kost tientallen uren per maand. Onze AI automatiseert het volledige traject.</p>
+          <ul>
+            <li>Automatisch credit nota's genereren bij retouren</li>
+            <li>Opvolging van openstaande credit nota's bij leveranciers</li>
+            <li>Koppeling tussen retourstatus en financiele afwikkeling</li>
+            <li>Escalatie bij uitblijvende creditering</li>
+          </ul>
+          <div class="module-result">Resultaat: Geen credit nota's meer die weken blijven liggen, volledige traceerbaarheid van retourfinancien.</div>
+        </div>
+        <div class="dienst-card reveal">
+          <div class="dienst-num">05</div>
+          <h3>Financiele Rapportage</h3>
+          <div class="dienst-sub-text">Realtime inzicht zonder handmatige Excel-exercities</div>
+          <p>Handmatig rapportages samenstellen uit verschillende systemen kost uren en levert verouderde data op. Onze AI verzamelt, analyseert en rapporteert automatisch.</p>
+          <ul>
+            <li>Automatische data-aggregatie uit alle financiele systemen</li>
+            <li>Realtime dashboards met KPI's en trends</li>
+            <li>Geautomatiseerde maand- en kwartaalrapportages</li>
+            <li>Proactieve alerts bij afwijkingen van budget of forecast</li>
+          </ul>
+          <div class="module-result">Resultaat: Altijd actuele financiele inzichten, geen handmatig rapportagewerk meer, snellere besluitvorming.</div>
+        </div>
+        <div class="dienst-card reveal">
+          <div class="dienst-num">06</div>
+          <h3>Boekhouding & Reconciliatie</h3>
+          <div class="dienst-sub-text">Automatische matching en afstemming</div>
+          <p>Bank-reconciliatie, het matchen van betalingen aan facturen en het opsporen van verschillen is repetitief werk dat foutgevoelig is. Onze AI doet het sneller en foutloos.</p>
+          <ul>
+            <li>Automatische bank-reconciliatie en matching</li>
+            <li>Detectie van ontbrekende of dubbele boekingen</li>
+            <li>Koppeling tussen betaalplatformen en boekhoudsysteem</li>
+            <li>Automatische journaalposten bij terugkerende transacties</li>
+          </ul>
+          <div class="module-result">Resultaat: 90% snellere reconciliatie, geen menselijke fouten meer, volledige audit trail.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STAT BREAK -->
+  <section class="stat-break reveal">
+    <div class="container">
+      <div class="stat-strip">
+        <div class="stat-item">
+          <div class="stat-num">24/7</div>
+          <div class="stat-label">Geautomatiseerde facturatie</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">0</div>
+          <div class="stat-label">Gemiste betalingsherinneringen</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">2-4 wk</div>
+          <div class="stat-label">Implementatietijd</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS FLOW -->
+  <section class="process-flow reveal">
+    <div class="container">
+      <div class="section-eyebrow">Het proces</div>
+      <h2 class="section-title">Zo bouwen we jouw Finance Workforce</h2>
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="process-num">01</div>
+          <div class="process-icon">🔍</div>
+          <h3>Analyse</h3>
+          <p>We brengen je financiele processen in kaart: facturen, betalingen, incasso, rapportages.</p>
+        </div>
+        <div class="process-step">
+          <div class="process-num">02</div>
+          <div class="process-icon">🎯</div>
+          <h3>Ontwerp</h3>
+          <p>We ontwerpen de workflow: automatische factuurverwerking, betalingsherinneringen, boekhouding-sync.</p>
+        </div>
+        <div class="process-step">
+          <div class="process-num">03</div>
+          <div class="process-icon">⚡</div>
+          <h3>Bouw</h3>
+          <p>Binnen 4-6 weken draait je Finance Workforce, gekoppeld aan je boekhoudpakket.</p>
+        </div>
+        <div class="process-step">
+          <div class="process-num">04</div>
+          <div class="process-icon">🧪</div>
+          <h3>Test</h3>
+          <p>We valideren met echte facturen en transacties. Nul fouten is de norm.</p>
+        </div>
+        <div class="process-step">
+          <div class="process-num">05</div>
+          <div class="process-icon">🚀</div>
+          <h3>Live</h3>
+          <p>Nooit meer een gemiste betaling. Realtime inzicht in je cashflow.</p>
+        </div>
+      </div>
+      <div class="process-timeline">
+        <span>Week 1: analyse + ontwerp</span>
+        <span>Week 2-4: bouw + test</span>
+        <span>Week 5-6: live + doorontwikkeling</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- GERELATEERDE DIENSTEN -->
+  <!-- FAQ -->
+  <section class="faq-section reveal" style="position:relative;overflow:hidden;">
+    <canvas id="ribbonCanvas2" style="position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;"></canvas>
+    <div class="container" style="position:relative;z-index:1;">
+      <h2>Veelgestelde vragen</h2>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>Hoeveel kost finance automatisering?</summary>
+          <p>Elke situatie is maatwerk. We starten altijd met een audit waarin we je processen analyseren en een concreet plan met ROI-berekening opleveren. Zo weet je precies wat het oplevert voordat je investeert.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Met welke boekhoudsystemen integreert AI Volution?</summary>
+          <p>Wij integreren met alle gangbare systemen die een API bieden: Exact Online, Twinfield, Xero, AFAS, Unit4, Mollie, Stripe en meer. Ons uitgangspunt: je blijft werken met je huidige software, wij bouwen de AI-laag eromheen.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Hoe lang duurt de implementatie?</summary>
+          <p>Standaard implementatie: 4-6 weken. Complexe multi-systeem integraties: 4-8 weken. Eerste resultaten zijn zichtbaar binnen 14 dagen. We werken in sprints zodat je snel waarde ziet.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Is mijn financiele data veilig?</summary>
+          <p>Ja. Alle data wordt verwerkt conform AVG/GDPR. We werken met end-to-end encryptie, de AI draait in jouw eigen omgeving en er is geen vendor lock-in. Je bent eigenaar van alle data en modellen.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Kan de AI ook complexe financiele beslissingen nemen?</summary>
+          <p>De AI handelt routinematige taken volledig autonoom af. Bij complexe beslissingen (zoals negatieve marge-situaties of grote bedragen) escaleert de AI naar de juiste persoon met alle relevante context. Je bepaalt de drempels.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Werkt dit ook voor bedrijven met veel leveranciers?</summary>
+          <p>Juist bij veel leveranciers en hoog transactievolume is de impact het grootst. De AI schaalt moeiteloos mee - of je nu 10 of 500 facturen per dag verwerkt, de verwerkingstijd blijft constant.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta reveal">
+    <div class="container">
+      <div class="cta-box">
+        <div class="cta-text">
+          <h2>Klaar om jouw finance te automatiseren?</h2>
+          <p>Plan een gratis en vrijblijvend consult en ontdek hoeveel uur jouw finance team kan besparen met intelligente automatisering.</p>
+        </div>
+        <a href="#" class="btn-cta" onclick="openScanModal();return false;">Gratis Consult</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="assets/logo-licht.png" alt="AI Volution" style="height:32px; margin-bottom:8px;">
+          <p>Wij bouwen AI Workforces die jouw team versterken en je omzet per medewerker verhogen.</p>
+          <div class="footer-contact">
+            <div><span>E-mail</span><a href="mailto:info@ai-volution.nl">info@ai-volution.nl</a></div>
+            <div><span>Telefoon</span><a href="tel:+3197010275159">+31 970 102 75159</a></div>
+            <div><span>Kantoor</span><a href="https://maps.google.com/?q=De+Vriesstraat+26+Oud-Beijerland">De Vriesstraat 26, 3261 PC Oud-Beijerland</a></div>
+          </div>
+        </div>
+                <div class="footer-col"><h4>Diensten</h4><ul>
+          <li><a href="sales-automation.html">Sales Automatisering</a></li>
+          <li><a href="marketing-automation.html">Marketing Automatisering</a></li>
+          <li><a href="internal-processes.html">Interne Processen</a></li>
+          <li><a href="automate-finance.html">Finance Automatisering</a></li>
+          <li><a href="ai-agents-detail.html">AI Agent Workforces</a></li>
+          <li><a href="automate-support.html">Klantenservice</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>Bedrijf</h4><ul>
+          <li><a href="over-ons.html">Over Ons</a></li>
+          <li><a href="aanpak.html">Aanpak</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="roi.html">ROI Calculator</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>Nieuwsbrief</h4>
+  <div style="min-height:250px;">
+    <iframe
+      src="https://fc.future-growth.nl/widget/form/N2V6YGvNn1bQkMZIlWDk"
+      style="width:100%;height:100%;border:none;border-radius:3px"
+      id="inline-N2V6YGvNn1bQkMZIlWDk" 
+      data-layout="{'id':'INLINE'}"
+      data-trigger-type="alwaysShow"
+      data-trigger-value=""
+      data-activation-type="alwaysActivated"
+      data-activation-value=""
+      data-deactivation-type="neverDeactivate"
+      data-deactivation-value=""
+      data-form-name="Nieuwsbrief Site"
+      data-height="250"
+      data-layout-iframe-id="inline-N2V6YGvNn1bQkMZIlWDk"
+      data-form-id="N2V6YGvNn1bQkMZIlWDk"
+      title="Nieuwsbrief Site"
+    ></iframe>
+    <script src="https://fc.future-growth.nl/js/form_embed.js"></script>
+  </div>
+</div>
+      </div>
+      <div class="footer-line">
+        <p>&copy; 2026 AI Volution. Alle rechten voorbehouden.</p>
+        <div class="footer-line-links"><a href="privacybeleid.html">Privacybeleid</a><a href="algemene-voorwaarden.html">Algemene voorwaarden</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js" defer></script>
+  <script src="ribbon.js" defer></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+
+    initRibbon('ribbonCanvas', [
+      { r:26, g:121, b:255, lines:20, spread:30, baseY:0.30, speed:0.50, amp:140, freq:0.003, twist:0.007, opacity:0.11, lineWidth:0.7 },
+      { r:139, g:92, b:246, lines:16, spread:22, baseY:0.50, speed:0.42, amp:120, freq:0.0025, twist:0.005, opacity:0.08, lineWidth:0.6 },
+      { r:236, g:72, b:153, lines:14, spread:20, baseY:0.40, speed:0.38, amp:100, freq:0.0035, twist:0.006, opacity:0.06, lineWidth:0.6 },
+    ]);
+    initRibbon2('ribbonCanvas2');
+    });
+  </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Finance Automatisering met AI",
+  "description": "AI Volution automatiseert je finance: factuurverwerking, incasso-opvolging en cashflow monitoring. Snellere cashflow, minder fouten. Plan een gratis scan.",
+  "serviceType": "Finance Automatisering",
+  "provider": {
+    "@type": "Organization",
+    "name": "AI Volution",
+    "url": "https://ai-volution.nl"
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "Nederland"
+  }
+}
+</script>
+<!-- Scan Modal -->
+<div class="scan-modal-overlay" id="scanModal">
+  <div class="scan-modal">
+    <button class="scan-modal-close" onclick="closeScanModal()">&times;</button>
+    <h2>Gratis AI Strategie Scan</h2>
+    <p class="scan-subtitle">Ontdek in 30 minuten welke processen jij kunt automatiseren en hoeveel tijd en geld je bespaart.</p>
+    <iframe
+      src="https://fc.future-growth.nl/widget/form/VZKtnbuXIFCf3TvXiFGO"
+      style="width:100%;height:631px;border:none;border-radius:3px"
+      id="inline-VZKtnbuXIFCf3TvXiFGO" 
+      data-layout="{'id':'INLINE'}"
+      data-trigger-type="alwaysShow"
+      data-trigger-value=""
+      data-activation-type="alwaysActivated"
+      data-activation-value=""
+      data-deactivation-type="neverDeactivate"
+      data-deactivation-value=""
+      data-form-name="AI-ROI Scan (Simpele Scan)"
+      data-height="631"
+      data-layout-iframe-id="inline-VZKtnbuXIFCf3TvXiFGO"
+      data-form-id="VZKtnbuXIFCf3TvXiFGO"
+      title="AI-ROI Scan (Simpele Scan)"
+    ></iframe>
+      </div>
+</div>
+
+</body>
+</html>

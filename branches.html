@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Automatisering per Branche | AI Volution</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="AI Workforces op maat per branche: B2B SaaS, logistiek, e-commerce en dienstverleners. Branche-specifieke AI-automatisering door AI Volution. Bekijk onze aanpak.">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="canonical" href="https://ai-volution.nl/branches.html">
+  <link rel="alternate" hreflang="nl-NL" href="https://ai-volution.nl/branches.html">
+  <meta property="og:title" content="AI Automatisering per Branche | AI Volution">
+  <meta property="og:description" content="AI Workforces op maat per branche: B2B SaaS, logistiek, e-commerce en dienstverleners. Branche-specifieke AI-automatisering door AI Volution. Bekijk onze aanpak.">
+  <meta property="og:image" content="https://ai-volution.nl/assets/logo-licht.png">
+  <meta property="og:url" content="https://ai-volution.nl/branches.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="nl_NL">
+  <meta property="og:site_name" content="AI Volution">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI Automatisering per Branche | AI Volution">
+  <meta name="twitter:description" content="AI Workforces op maat per branche: B2B SaaS, logistiek, e-commerce en dienstverleners. Branche-specifieke AI-automatisering door AI Volution. Bekijk onze aanpak.">
+  <meta name="twitter:image" content="https://ai-volution.nl/assets/logo-licht.png">
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container">
+      <a href="index.html" class="navbar-logo"><img src="assets/logo-licht.png" alt="AI Volution" style="height:28px;"></a>
+      <ul class="navbar-links">
+        <li><a href="diensten.html">Diensten</a></li>
+        <li><a href="branches.html" class="active">Branches</a></li>
+        <li><a href="over-ons.html">Over ons</a></li>
+        <li><a href="aanpak.html">Aanpak</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="#" class="navbar-cta" onclick="openScanModal();return false;">Gratis Consult</a>
+      <button class="menu-toggle" onclick="this.closest('.navbar').querySelector('.navbar-links').classList.toggle('show')">&#9776;</button>
+    </div>
+  </nav>
+
+  <div class="page-wrapper">
+    <canvas id="ribbonCanvas" class="page-canvas"></canvas>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="section-eyebrow">Branches</div>
+        <h1>AI voor bedrijven: branches die wij bedienen</h1>
+        <p>Onze AI agents voor bedrijven zijn afgestemd op de unieke behoeften van verschillende industrie&euml;n. Van B2B SaaS tot logistiek en e-commerce.</p>
+      </div>
+    </section>
+
+    <!-- VERTROUWD DOOR -->
+    <section class="klanten reveal">
+      <div class="container">
+        <div class="klanten-inner">
+          <div class="klanten-label">Vertrouwd door</div>
+          <div class="klanten-divider"></div>
+          <div class="klanten-scroll">
+            <div class="klanten-track">
+              <img src="assets/klanten/easystorage.png" alt="easyStorage" style="height:22px;">
+              <img src="assets/klanten/fundingteam.png" alt="Fundingteam" style="height:90px;">
+              <img src="assets/klanten/motul.png" alt="Motul" style="height:40px;">
+              <img src="assets/klanten/lassoo-ariaans.svg" alt="Lassoo Ariaans" style="height:32px;">
+              <!-- ISS logo: herplaats als <img src="assets/klanten/iss.png" alt="ISS" style="height:38px;"> -->
+              <img src="assets/klanten/endeavour.webp" alt="Endeavour" style="height:22px;">
+              <img src="assets/klanten/minerva.png" alt="Minerva Development" style="height:22px;">
+              <img src="assets/klanten/tis.png" alt="TIS" style="height:24px;">
+              <img src="assets/klanten/easystorage.png" alt="easyStorage" style="height:22px;">
+              <img src="assets/klanten/fundingteam.png" alt="Fundingteam" style="height:90px;">
+              <img src="assets/klanten/motul.png" alt="Motul" style="height:40px;">
+              <img src="assets/klanten/lassoo-ariaans.svg" alt="Lassoo Ariaans" style="height:32px;">
+              <img src="assets/klanten/endeavour.webp" alt="Endeavour" style="height:22px;">
+              <img src="assets/klanten/minerva.png" alt="Minerva Development" style="height:22px;">
+              <img src="assets/klanten/tis.png" alt="TIS" style="height:24px;">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- BRANCHES -->
+  <section class="branches grid-hex" style="position:relative;overflow:hidden;">
+    <canvas id="ribbonCanvas2" style="position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;"></canvas>
+    <div class="container" style="position:relative;z-index:1;">
+      <div class="branches-grid">
+        <div class="branch-card reveal">
+          <h3>B2B Tech high-touch SaaS bedrijven</h3>
+          <p class="branch-full">SaaS-bedrijven groeien niet door meer features, maar door slimmere processen. We nemen je onboarding, support en sales voorbereiding over met AI Workforces die klantdata verzamelen, antwoorden geven en alles klaarzetten voor je team, nog voordat iemand op een ticket reageert.</p>
+          <a href="branche-b2b-saas.html" class="branch-link">Bekijk AI voor B2B SaaS bedrijven &rarr;</a>
+        </div>
+        <div class="branch-card reveal">
+          <h3>Logistiek &amp; Supply Chain</h3>
+          <p class="branch-full">Orderstatus checken, pakketnummers opzoeken, carriers matchen, leveranciers mailen - honderden uren per maand aan handmatig proceswerk. Onze AI Workforces automatiseren de complete supply chain operatie zodat je team zich richt op uitzonderingen, niet op routine.</p>
+          <a href="branche-logistiek.html" class="branch-link">Bekijk AI voor Logistiek &amp; Supply Chain &rarr;</a>
+        </div>
+        <div class="branch-card reveal">
+          <h3>(B2B) E-commerce</h3>
+          <p class="branch-full">Meer orders. Minder frictie. AI regelt de rest. We automatiseren orderverwerking, klantvragen, betalingen en retouren met AI Workforces die 24/7 draaien. Geen verloren leads, geen wachttijd, geen handmatige processen. Je conversie stijgt en klanten blijven terugkomen.</p>
+          <a href="branche-ecommerce.html" class="branch-link">Bekijk AI voor E-commerce &rarr;</a>
+        </div>
+        <div class="branch-card reveal">
+          <h3>Dienstverleners</h3>
+          <p class="branch-full">Minder administratie. Meer aandacht voor je klant. We automatiseren de complete klantreis: van intake tot loyaliteit, van facturatie tot 24/7 bereikbaarheid. Klantvragen worden direct beantwoord, voortgang helder gecommuniceerd, zonder tussenkomst van je team.</p>
+          <a href="branche-dienstverleners.html" class="branch-link">Bekijk AI voor Dienstverleners &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- QUOTE -->
+  <section class="quote-section">
+    <div class="container">
+      <div class="quote-mark">"</div>
+      <blockquote>
+        Elke branche heeft unieke uitdagingen. Wij bouwen AI Workforces die precies passen bij jouw sector.
+      </blockquote>
+      <div class="quote-attribution">AI Volution</div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <section class="marquee">
+    <div class="marquee-track">
+      <span class="marquee-text">B2B TECH SAAS</span><div class="marquee-sep"></div>
+      <span class="marquee-text ghost">LOGISTIEK</span><div class="marquee-sep"></div>
+      <span class="marquee-text">(B2B) E-COMMERCE</span><div class="marquee-sep"></div>
+      <span class="marquee-text ghost">DIENSTVERLENERS</span><div class="marquee-sep"></div>
+      <span class="marquee-text">B2B TECH SAAS</span><div class="marquee-sep"></div>
+      <span class="marquee-text ghost">LOGISTIEK</span><div class="marquee-sep"></div>
+      <span class="marquee-text">(B2B) E-COMMERCE</span><div class="marquee-sep"></div>
+      <span class="marquee-text ghost">DIENSTVERLENERS</span><div class="marquee-sep"></div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="container">
+      <div class="cta-box">
+        <div class="cta-text">
+          <h2>Ontdek wat AI voor jouw branche kan betekenen</h2>
+          <p>Plan een gratis en vrijblijvend consult en ontdek welke resultaten we voor jullie kunnen verbeteren.</p>
+        </div>
+        <a href="#" class="btn-cta" onclick="openScanModal();return false;">Gratis Consult</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="assets/logo-licht.png" alt="AI Volution" style="height:32px; margin-bottom:8px;">
+          <p>Wij bouwen AI Workforces die jouw team versterken en je omzet per medewerker verhogen.</p>
+          <div class="footer-contact">
+            <div><span>E-mail</span><a href="mailto:info@ai-volution.nl">info@ai-volution.nl</a></div>
+            <div><span>Telefoon</span><a href="tel:+3197010275159">+31 970 102 75159</a></div>
+            <div><span>Kantoor</span><a href="https://maps.google.com/?q=De+Vriesstraat+26+Oud-Beijerland">De Vriesstraat 26, 3261 PC Oud-Beijerland</a></div>
+          </div>
+        </div>
+                <div class="footer-col"><h4>Diensten</h4><ul>
+          <li><a href="sales-automation.html">Sales Automatisering</a></li>
+          <li><a href="marketing-automation.html">Marketing Automatisering</a></li>
+          <li><a href="internal-processes.html">Interne Processen</a></li>
+          <li><a href="automate-finance.html">Finance Automatisering</a></li>
+          <li><a href="ai-agents-detail.html">AI Agent Workforces</a></li>
+          <li><a href="automate-support.html">Klantenservice</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>Bedrijf</h4><ul>
+          <li><a href="over-ons.html">Over Ons</a></li>
+          <li><a href="aanpak.html">Aanpak</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="roi.html">ROI Calculator</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>Nieuwsbrief</h4>
+  <div style="min-height:250px;">
+    <iframe
+      src="https://fc.future-growth.nl/widget/form/N2V6YGvNn1bQkMZIlWDk"
+      style="width:100%;height:100%;border:none;border-radius:3px"
+      id="inline-N2V6YGvNn1bQkMZIlWDk" 
+      data-layout="{'id':'INLINE'}"
+      data-trigger-type="alwaysShow"
+      data-trigger-value=""
+      data-activation-type="alwaysActivated"
+      data-activation-value=""
+      data-deactivation-type="neverDeactivate"
+      data-deactivation-value=""
+      data-form-name="Nieuwsbrief Site"
+      data-height="250"
+      data-layout-iframe-id="inline-N2V6YGvNn1bQkMZIlWDk"
+      data-form-id="N2V6YGvNn1bQkMZIlWDk"
+      title="Nieuwsbrief Site"
+    ></iframe>
+    <script src="https://fc.future-growth.nl/js/form_embed.js"></script>
+  </div>
+</div>
+      </div>
+      <div class="footer-line">
+        <p>&copy; 2026 AI Volution. Alle rechten voorbehouden.</p>
+        <div class="footer-line-links"><a href="privacybeleid.html">Privacybeleid</a><a href="algemene-voorwaarden.html">Algemene voorwaarden</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js" defer></script>
+  <script src="ribbon.js" defer></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+
+    initRibbon('ribbonCanvas', [
+      { r:51, g:166, b:255, lines:16, spread:24, baseY:0.32, speed:0.42, amp:120, freq:0.003, twist:0.005, opacity:0.09, lineWidth:0.7 },
+      { r:139, g:92, b:246, lines:12, spread:18, baseY:0.52, speed:0.38, amp:100, freq:0.0028, twist:0.004, opacity:0.06, lineWidth:0.6 },
+    ]);
+    initRibbon2('ribbonCanvas2');
+    });
+  </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "AI Automatisering per Branche",
+  "url": "https://ai-volution.nl/branches.html",
+  "description": "AI Workforces op maat per branche: B2B SaaS, logistiek, e-commerce en dienstverleners. Branche-specifieke AI-automatisering door AI Volution. Bekijk onze aanpak.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "AI Volution",
+    "url": "https://ai-volution.nl"
+  }
+}
+</script>
+<!-- Scan Modal -->
+<div class="scan-modal-overlay" id="scanModal">
+  <div class="scan-modal">
+    <button class="scan-modal-close" onclick="closeScanModal()">&times;</button>
+    <h2>Gratis AI Strategie Scan</h2>
+    <p class="scan-subtitle">Ontdek in 30 minuten welke processen jij kunt automatiseren en hoeveel tijd en geld je bespaart.</p>
+    <iframe
+      src="https://fc.future-growth.nl/widget/form/VZKtnbuXIFCf3TvXiFGO"
+      style="width:100%;height:631px;border:none;border-radius:3px"
+      id="inline-VZKtnbuXIFCf3TvXiFGO" 
+      data-layout="{'id':'INLINE'}"
+      data-trigger-type="alwaysShow"
+      data-trigger-value=""
+      data-activation-type="alwaysActivated"
+      data-activation-value=""
+      data-deactivation-type="neverDeactivate"
+      data-deactivation-value=""
+      data-form-name="AI-ROI Scan (Simpele Scan)"
+      data-height="631"
+      data-layout-iframe-id="inline-VZKtnbuXIFCf3TvXiFGO"
+      data-form-id="VZKtnbuXIFCf3TvXiFGO"
+      title="AI-ROI Scan (Simpele Scan)"
+    ></iframe>
+      </div>
+</div>
+
+</body>
+</html>

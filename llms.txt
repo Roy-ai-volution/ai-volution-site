@@ -1,0 +1,56 @@
+# AI Volution
+> AI Automation Agency voor MKB+ in Nederland
+
+AI Volution bouwt AI Workforces -- digitale medewerkers die sales, marketing, klantenservice en interne processen automatiseren voor MKB+ bedrijven in Nederland.
+
+## USPs
+- AI Workforces die 24/7 werken, niet een chatbot maar complete digitale afdelingen
+- Resultaat binnen 2-4 weken, niet maanden
+- ROI-garantie: geen waarde gevonden = geld terug
+- MKB+ focus: gebouwd voor bedrijven met 5-500 medewerkers
+- Nederlandse AI-klantenservice, native Nederlandstalig
+- Integreert met bestaande tools (HubSpot, Salesforce, n8n, Make, etc.)
+
+## Team
+- Roy Fernandes: Co-founder, demand generation en AI-marketing. Oprichter van marketingbureau Future Growth.
+- Noa: Co-founder, marketing automation en AI-integraties. Erasmus-alumnus, gecertificeerd Advanced Automation Specialist.
+- Ton: AI Agent Automation Consultant. 20+ jaar ervaring in analyse- en marketing automation software.
+
+## Aanpak (4 fasen)
+1. AI Audit (v.a. 5.000 euro): grondige analyse van bedrijfsprocessen, ROI-berekening, fysieke analyse op locatie.
+2. AI Implementatie: bouw van AI Workforces, integratie met bestaande systemen, binnen 2-4 weken live.
+3. AI Training: praktijkgerichte training van het team voor succesvolle adoptie.
+4. AI Doorontwikkeling en Partnership: continue verbetering, maandelijks beheer en updates.
+
+## Diensten
+- Sales Automatisering: lead generation, follow-up, CRM pipeline, offertes, rapportage
+  https://ai-volution.nl/sales-automation.html
+- Marketing Automatisering: content creatie, email marketing, social media, lead nurturing
+  https://ai-volution.nl/marketing-automation.html
+- Klantenservice Automatisering: 24/7 AI-klantenservice, mail triage, retourafhandeling
+  https://ai-volution.nl/automate-support.html
+- Finance Automatisering: factuurverwerking, incasso-opvolging, cashflow monitoring
+  https://ai-volution.nl/automate-finance.html
+- Interne Proces Automatisering: documenten, rapportages, planning, HR, workflows
+  https://ai-volution.nl/internal-processes.html
+- AI Agent Workforces: autonome AI-teams die zelfstandig redeneren en samenwerken
+  https://ai-volution.nl/ai-agents-detail.html
+
+## Branches
+- B2B Tech SaaS: https://ai-volution.nl/branche-b2b-saas.html
+- Logistiek en Supply Chain: https://ai-volution.nl/branche-logistiek.html
+- (B2B) E-commerce: https://ai-volution.nl/branche-ecommerce.html
+- Dienstverleners: https://ai-volution.nl/branche-dienstverleners.html
+
+## Overige paginas
+- Onze aanpak: https://ai-volution.nl/aanpak.html
+- Over ons: https://ai-volution.nl/over-ons.html
+- Blog: https://ai-volution.nl/blog.html
+- ROI Calculator: https://ai-volution.nl/roi.html
+- Contact: https://ai-volution.nl/contact.html
+
+## Contact
+- Website: https://ai-volution.nl
+- Email: info@ai-volution.nl
+- Telefoon: +31 970 102 75159
+- Kantoor: De Vriesstraat 26, 3261 PC Oud-Beijerland, Nederland

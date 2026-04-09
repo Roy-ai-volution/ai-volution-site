@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Blog | Inzichten voor MKB+ | AI Volution</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="Lees de laatste inzichten over AI-automatisering, productiviteit en groei voor het Nederlandse MKB+. Tips, trends en praktijkcases. Ontdek meer.">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="canonical" href="https://ai-volution.nl/blog.html">
+  <link rel="alternate" hreflang="nl-NL" href="https://ai-volution.nl/blog.html">
+  <meta property="og:title" content="AI Blog - Inzichten voor MKB+ | AI Volution">
+  <meta property="og:description" content="Lees de laatste inzichten over AI-automatisering, productiviteit en groei voor het Nederlandse MKB+. Tips, trends en praktijkcases. Ontdek meer.">
+  <meta property="og:image" content="https://ai-volution.nl/assets/logo-licht.png">
+  <meta property="og:url" content="https://ai-volution.nl/blog.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="nl_NL">
+  <meta property="og:site_name" content="AI Volution">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI Blog - Inzichten voor MKB+ | AI Volution">
+  <meta name="twitter:description" content="Lees de laatste inzichten over AI-automatisering, productiviteit en groei voor het Nederlandse MKB+. Tips, trends en praktijkcases. Ontdek meer.">
+  <meta name="twitter:image" content="https://ai-volution.nl/assets/logo-licht.png">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container">
+      <a href="index.html" class="navbar-logo"><img src="assets/logo-licht.png" alt="AI Volution" style="height:28px;"></a>
+      <ul class="navbar-links">
+        <li><a href="diensten.html">Diensten</a></li>
+        <li><a href="branches.html">Branches</a></li>
+        <li><a href="over-ons.html">Over ons</a></li>
+        <li><a href="aanpak.html">Aanpak</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="#" class="navbar-cta" onclick="openScanModal();return false;">Gratis Consult</a>
+      <button class="menu-toggle" onclick="this.closest('.navbar').querySelector('.navbar-links').classList.toggle('show')">&#9776;</button>
+    </div>
+  </nav>
+
+  <div class="page-wrapper">
+    <canvas id="ribbonCanvas" class="page-canvas"></canvas>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="section-eyebrow">Blog</div>
+        <h1>Inzichten & Updates</h1>
+        <p>De laatste inzichten over AI-automatisering, productiviteit en groei voor het Nederlandse MKB+.</p>
+      </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <section class="marquee">
+      <div class="marquee-track">
+        <span class="marquee-text">INZICHTEN</span><div class="marquee-sep"></div>
+        <span class="marquee-text ghost">AI TRENDS</span><div class="marquee-sep"></div>
+        <span class="marquee-text">MKB+ GROEI</span><div class="marquee-sep"></div>
+        <span class="marquee-text ghost">AUTOMATISERING</span><div class="marquee-sep"></div>
+        <span class="marquee-text">INZICHTEN</span><div class="marquee-sep"></div>
+        <span class="marquee-text ghost">AI TRENDS</span><div class="marquee-sep"></div>
+        <span class="marquee-text">MKB+ GROEI</span><div class="marquee-sep"></div>
+        <span class="marquee-text ghost">AUTOMATISERING</span><div class="marquee-sep"></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- KLANTEN -->
+  <section class="klanten reveal">
+    <div class="container">
+      <div class="klanten-inner">
+        <div class="klanten-label">Vertrouwd door</div>
+        <div class="klanten-divider"></div>
+        <div class="klanten-scroll">
+          <div class="klanten-track">
+            <img src="assets/klanten/easystorage.png" alt="easyStorage" style="height:22px;">
+            <img src="assets/klanten/fundingteam.png" alt="Fundingteam" style="height:90px;">
+            <img src="assets/klanten/motul.png" alt="Motul" style="height:40px;">
+            <img src="assets/klanten/lassoo-ariaans.svg" alt="Lassoo Ariaans" style="height:32px;">
+            <!-- ISS logo: herplaats als <img src="assets/klanten/iss.png" alt="ISS" style="height:38px;"> -->
+            <img src="assets/klanten/endeavour.webp" alt="Endeavour" style="height:22px;">
+            <img src="assets/klanten/minerva.png" alt="Minerva Development" style="height:22px;">
+            <img src="assets/klanten/tis.png" alt="TIS" style="height:24px;">
+            <img src="assets/klanten/easystorage.png" alt="easyStorage" style="height:22px;">
+            <img src="assets/klanten/fundingteam.png" alt="Fundingteam" style="height:90px;">
+            <img src="assets/klanten/motul.png" alt="Motul" style="height:40px;">
+            <img src="assets/klanten/lassoo-ariaans.svg" alt="Lassoo Ariaans" style="height:32px;">
+            <img src="assets/klanten/endeavour.webp" alt="Endeavour" style="height:22px;">
+            <img src="assets/klanten/minerva.png" alt="Minerva Development" style="height:22px;">
+            <img src="assets/klanten/tis.png" alt="TIS" style="height:24px;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOG -->
+  <section class="blog grid-squares" style="position:relative;overflow:hidden;">
+    <canvas id="ribbonCanvas2" style="position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;"></canvas>
+    <div class="container" style="position:relative;z-index:1;">
+      <!-- FILTERS -->
+      <div class="blog-filters" id="blog-filters">
+        <button class="blog-filter active" data-cat="all">Alles</button>
+        <button class="blog-filter" data-cat="AI">AI</button>
+        <button class="blog-filter" data-cat="Automatisering">Automatisering</button>
+        <button class="blog-filter" data-cat="Sales">Sales</button>
+        <button class="blog-filter" data-cat="Marketing">Marketing</button>
+      </div>
+
+      <!-- FEATURED POST -->
+      <div id="featured-post" class="blog-featured" style="display:none;">
+        <div class="blog-featured-grid">
+          <div>
+            <div style="font-family:var(--font-d);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--blue);margin-bottom:12px;" id="feat-cat">UITGELICHT</div>
+            <h2 style="font-family:var(--font-d);font-size:32px;font-weight:900;letter-spacing:-1px;line-height:1.2;margin-bottom:16px;" id="feat-title"></h2>
+            <p style="font-size:15px;color:rgba(255,255,255,.6);line-height:1.7;" id="feat-excerpt"></p>
+            <div style="margin-top:16px;font-size:13px;color:rgba(255,255,255,.35);" id="feat-meta"></div>
+          </div>
+          <div id="feat-img" style="height:280px;border-radius:16px;background:linear-gradient(135deg,#111827 0%,#1a2332 100%);background-size:cover;background-position:center;"></div>
+        </div>
+      </div>
+
+      <!-- GRID -->
+      <div class="blog-grid" id="blog-grid">
+        <div style="grid-column:1/-1; text-align:center; padding:60px 0; color:var(--text-muted);">
+          Blogposts laden...
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOG DETAIL (verborgen, wordt dynamisch gevuld) -->
+  <div id="blog-detail" style="display:none;">
+    <div class="container">
+      <!-- wordt dynamisch gevuld door JS -->
+    </div>
+  </div>
+
+  <!-- KLANTEN -->
+  <section class="klanten reveal" id="klanten-bottom">
+    <div class="container">
+      <div class="klanten-inner">
+        <div class="klanten-label">Vertrouwd door</div>
+        <div class="klanten-divider"></div>
+        <div class="klanten-scroll">
+          <div class="klanten-track">
+            <img src="assets/klanten/easystorage.png" alt="easyStorage" style="height:22px;">
+            <img src="assets/klanten/fundingteam.png" alt="Fundingteam" style="height:90px;">
+            <img src="assets/klanten/motul.png" alt="Motul" style="height:40px;">
+            <img src="assets/klanten/lassoo-ariaans.svg" alt="Lassoo Ariaans" style="height:32px;">
+            <img src="assets/klanten/endeavour.webp" alt="Endeavour" style="height:22px;">
+            <img src="assets/klanten/minerva.png" alt="Minerva Development" style="height:22px;">
+            <img src="assets/klanten/tis.png" alt="TIS" style="height:24px;">
+            <img src="assets/klanten/easystorage.png" alt="easyStorage" style="height:22px;">
+            <img src="assets/klanten/fundingteam.png" alt="Fundingteam" style="height:90px;">
+            <img src="assets/klanten/motul.png" alt="Motul" style="height:40px;">
+            <img src="assets/klanten/lassoo-ariaans.svg" alt="Lassoo Ariaans" style="height:32px;">
+            <img src="assets/klanten/endeavour.webp" alt="Endeavour" style="height:22px;">
+            <img src="assets/klanten/minerva.png" alt="Minerva Development" style="height:22px;">
+            <img src="assets/klanten/tis.png" alt="TIS" style="height:24px;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- CTA -->
+  <section class="cta reveal">
+    <div class="container">
+      <div class="cta-box">
+        <div class="cta-text">
+          <h2>Blijf op de hoogte van AI-trends</h2>
+          <p>Ontvang onze nieuwste inzichten en tips rechtstreeks in je inbox.</p>
+        </div>
+        <a href="#" class="btn-cta" onclick="openScanModal();return false;">Plan een gratis scan</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="assets/logo-licht.png" alt="AI Volution" style="height:32px; margin-bottom:8px;">
+          <p>Wij bouwen AI Workforces die jouw team versterken en je omzet per medewerker verhogen.</p>
+          <div class="footer-contact">
+            <div><span>E-mail</span><a href="mailto:info@ai-volution.nl">info@ai-volution.nl</a></div>
+            <div><span>Telefoon</span><a href="tel:+3197010275159">+31 970 102 75159</a></div>
+            <div><span>Kantoor</span><a href="https://maps.google.com/?q=De+Vriesstraat+26+Oud-Beijerland">De Vriesstraat 26, 3261 PC Oud-Beijerland</a></div>
+          </div>
+        </div>
+                <div class="footer-col"><h4>Diensten</h4><ul>
+          <li><a href="sales-automation.html">Sales Automatisering</a></li>
+          <li><a href="marketing-automation.html">Marketing Automatisering</a></li>
+          <li><a href="internal-processes.html">Interne Processen</a></li>
+          <li><a href="automate-finance.html">Finance Automatisering</a></li>
+          <li><a href="ai-agents-detail.html">AI Agent Workforces</a></li>
+          <li><a href="automate-support.html">Klantenservice</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>Bedrijf</h4><ul>
+          <li><a href="over-ons.html">Over Ons</a></li>
+          <li><a href="aanpak.html">Aanpak</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="roi.html">ROI Calculator</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>Nieuwsbrief</h4>
+  <div style="min-height:250px;">
+    <iframe
+      src="https://fc.future-growth.nl/widget/form/N2V6YGvNn1bQkMZIlWDk"
+      style="width:100%;height:100%;border:none;border-radius:3px"
+      id="inline-N2V6YGvNn1bQkMZIlWDk" 
+      data-layout="{'id':'INLINE'}"
+      data-trigger-type="alwaysShow"
+      data-trigger-value=""
+      data-activation-type="alwaysActivated"
+      data-activation-value=""
+      data-deactivation-type="neverDeactivate"
+      data-deactivation-value=""
+      data-form-name="Nieuwsbrief Site"
+      data-height="250"
+      data-layout-iframe-id="inline-N2V6YGvNn1bQkMZIlWDk"
+      data-form-id="N2V6YGvNn1bQkMZIlWDk"
+      title="Nieuwsbrief Site"
+    ></iframe>
+    <script src="https://fc.future-growth.nl/js/form_embed.js"></script>
+  </div>
+</div>
+      </div>
+      <div class="footer-line">
+        <p>&copy; 2026 AI Volution. Alle rechten voorbehouden.</p>
+        <div class="footer-line-links"><a href="privacybeleid.html">Privacybeleid</a><a href="algemene-voorwaarden.html">Algemene voorwaarden</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js" defer></script>
+  <script src="ribbon.js" defer></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+
+    initRibbon('ribbonCanvas', [
+      { r:51, g:166, b:255, lines:16, spread:24, baseY:0.32, speed:0.42, amp:120, freq:0.003, twist:0.005, opacity:0.09, lineWidth:0.7 },
+      { r:139, g:92, b:246, lines:12, spread:18, baseY:0.52, speed:0.38, amp:100, freq:0.0028, twist:0.004, opacity:0.06, lineWidth:0.6 },
+    ]);
+    initRibbon2('ribbonCanvas2');
+
+    // Blog laden vanuit Supabase
+    (async function() {
+      const SUPA_URL = 'https://lwparxjwqkndeixigrll.supabase.co';
+      const SUPA_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imx3cGFyeGp3cWtuZGVpeGlncmxsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDk3Mzc4NzEsImV4cCI6MjA2NTMxMzg3MX0.CAKuNIt-kNfAf5ansF3Vpybf-NAkA2V6yX52KBHGxRw';
+      const STORAGE_URL = SUPA_URL + '/storage/v1/object/public/blog-images/';
+      const sb = supabase.createClient(SUPA_URL, SUPA_KEY);
+
+      // Helper: image URL resolven (mix van filenames en volledige URLs)
+      function resolveImg(imageUrl) {
+        if (!imageUrl) return '';
+        if (imageUrl.startsWith('http')) return imageUrl;
+        return STORAGE_URL + imageUrl;
+      }
+
+      // Helper: initialen uit naam
+      function getInitials(name) {
+        if (!name) return 'AV';
+        return name.split(' ').map(w => w[0]).join('').substring(0, 2).toUpperCase();
+      }
+
+      // Check of we een specifieke post moeten tonen
+      const urlParams = new URLSearchParams(window.location.search);
+      const postSlug = urlParams.get('post');
+
+      if (postSlug) {
+        // ── DETAIL VIEW ──
+        await renderDetailView(postSlug);
+      } else {
+        // ── GRID VIEW ──
+        await renderGridView();
+      }
+
+      // ═══════════════════════════════════════════
+      // DETAIL VIEW
+      // ═══════════════════════════════════════════
+      async function renderDetailView(slug) {
+        try {
+          // Verberg blog overview secties
+          document.querySelector('.page-wrapper').style.display = 'none';
+          var klantenSections = document.querySelectorAll('.klanten');
+          klantenSections.forEach(function(s) { s.style.display = 'none'; });
+          document.querySelector('.blog.grid-squares').style.display = 'none';
+          var marqueeSection = document.querySelector('.marquee');
+          if (marqueeSection) marqueeSection.style.display = 'none';
+          var ctaSection = document.querySelector('.cta.reveal');
+          if (ctaSection) ctaSection.style.display = 'none';
+
+          // Toon detail container
+          var detailEl = document.getElementById('blog-detail');
+          detailEl.style.display = 'block';
+          detailEl.style.paddingTop = '100px';
+
+          // Fetch de post
+          var result = await sb.from('blog_posts')
+            .select('*')
+            .eq('slug', slug)
+            .eq('published', true)
+            .single();
+
+          if (result.error || !result.data) {
+            detailEl.querySelector('.container').innerHTML =
+              '<div class="blog-article">' +
+                '<a href="blog.html" class="blog-back">&larr; Terug naar blog</a>' +
+                '<h2>Post niet gevonden</h2>' +
+                '<p style="color:var(--text-muted);font-size:17px;">Deze blogpost bestaat niet of is niet meer beschikbaar.</p>' +
+                '<a href="blog.html" class="btn-cta" style="margin-top:24px;display:inline-block;">Bekijk alle posts</a>' +
+              '</div>';
+            document.title = 'Post niet gevonden | AI Volution Blog';
+            return;
+          }
+
+          var post = result.data;
+          document.title = post.title + ' | AI Volution Blog';
+
+          // Update meta tags voor SEO/sharing
+          if (post.meta_description) {
+            var metaDesc = document.querySelector('meta[name="description"]');
+            if (metaDesc) metaDesc.setAttribute('content', post.meta_description);
+          }
+          var ogTitle = document.querySelector('meta[property="og:title"]');
+          if (ogTitle) ogTitle.setAttribute('content', post.title + ' | AI Volution Blog');
+          var ogDesc = document.querySelector('meta[property="og:description"]');
+          if (ogDesc && post.meta_description) ogDesc.setAttribute('content', post.meta_description);
+          var ogImg = document.querySelector('meta[property="og:image"]');
+          if (ogImg && post.image_url) ogImg.setAttribute('content', resolveImg(post.image_url));
+
+          // Bouw de detail HTML
+          var heroImg = resolveImg(post.image_url);
+          var html = '<div class="blog-article">';
+
+          // Terug link
+          html += '<a href="blog.html" class="blog-back">&larr; Terug naar blog</a>';
+
+          // Hero image
+          if (heroImg) {
+            html += '<img src="' + heroImg + '" alt="' + (post.title || '') + '" class="blog-article-hero">';
+          }
+
+          // Meta info
+          html += '<div class="blog-article-meta">';
+          if (post.category) {
+            html += '<span class="blog-article-cat">' + post.category + '</span>';
+          }
+          if (post.date) {
+            html += '<span>' + post.date + '</span>';
+          }
+          if (post.read_time) {
+            // read_time kan al "X min leestijd" bevatten of alleen een getal zijn
+            var readTimeText = String(post.read_time);
+            html += '<span>' + (readTimeText.indexOf('min') !== -1 ? readTimeText : readTimeText + ' min leestijd') + '</span>';
+          }
+          if (post.author_name) {
+            html += '<span>Door ' + post.author_name + '</span>';
+          }
+          html += '</div>';
+
+          // Titel
+          html += '<h2>' + (post.title || '') + '</h2>';
+
+          // Subtitle
+          if (post.subtitle) {
+            html += '<p class="blog-article-subtitle">' + post.subtitle + '</p>';
+          }
+
+          // Content (HTML uit Supabase) - strip inline color/background-color styles
+          // zodat de site dark-theme CSS het overneemt
+          var cleanContent = (post.content || '')
+            .replace(/color\s*:\s*#[0-9a-fA-F]{3,8}\s*;?/gi, '')
+            .replace(/color\s*:\s*rgb[a]?\([^)]+\)\s*;?/gi, '')
+            .replace(/background-color\s*:\s*#[0-9a-fA-F]{3,8}\s*;?/gi, '')
+            .replace(/background-color\s*:\s*rgb[a]?\([^)]+\)\s*;?/gi, '')
+            .replace(/font-family\s*:\s*[^;"]+;?/gi, '');
+          html += '<div class="blog-article-content">' + cleanContent + '</div>';
+
+          // Tags
+          if (post.tags && Array.isArray(post.tags) && post.tags.length > 0) {
+            html += '<div class="blog-article-tags">';
+            post.tags.forEach(function(tag) {
+              html += '<span class="blog-article-tag">' + tag + '</span>';
+            });
+            html += '</div>';
+          }
+
+          // FAQ accordion
+          if (post.faq && Array.isArray(post.faq) && post.faq.length > 0) {
+            html += '<div class="blog-faq">';
+            html += '<h2>Veelgestelde vragen</h2>';
+            post.faq.forEach(function(item, idx) {
+              html += '<div class="blog-faq-item">';
+              html += '<button class="blog-faq-question" data-faq="' + idx + '">';
+              html += '<span>' + (item.question || item.q || '') + '</span>';
+              html += '<span class="faq-icon">+</span>';
+              html += '</button>';
+              html += '<div class="blog-faq-answer"><div class="blog-faq-answer-inner">' + (item.answer || item.a || '') + '</div></div>';
+              html += '</div>';
+            });
+            html += '</div>';
+          }
+
+          // Auteur info
+          if (post.author_name) {
+            html += '<div class="blog-article-author">';
+            html += '<div class="blog-article-author-avatar">' + getInitials(post.author_name) + '</div>';
+            html += '<div class="blog-article-author-info">';
+            html += '<span class="blog-article-author-name">' + post.author_name + '</span>';
+            if (post.author_title) {
+              html += '<span class="blog-article-author-title">' + post.author_title + '</span>';
+            }
+            html += '</div>';
+            html += '</div>';
+          }
+
+          // Gerelateerde posts
+          html += '<div class="blog-related" id="blog-related"></div>';
+
+          // CTA
+          html += '<div class="blog-detail-cta">';
+          html += '<h3>Benieuwd wat AI voor jouw bedrijf kan doen?</h3>';
+          html += '<p>Plan een gratis strategiescan en ontdek de mogelijkheden.</p>';
+          html += '<a href="#" class="btn-cta" onclick="openScanModal();return false;">Gratis AI Scan</a>';
+          html += '</div>';
+
+          html += '</div>'; // .blog-article
+
+          detailEl.querySelector('.container').innerHTML = html;
+
+          // FAQ accordion interactie
+          detailEl.querySelectorAll('.blog-faq-question').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+              var item = this.closest('.blog-faq-item');
+              var answer = item.querySelector('.blog-faq-answer');
+              var isOpen = item.classList.contains('open');
+
+              // Sluit alle andere items
+              detailEl.querySelectorAll('.blog-faq-item.open').forEach(function(openItem) {
+                openItem.classList.remove('open');
+                openItem.querySelector('.blog-faq-answer').style.maxHeight = '0';
+              });
+
+              // Toggle huidige
+              if (!isOpen) {
+                item.classList.add('open');
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+              }
+            });
+          });
+
+          // Fetch gerelateerde posts
+          if (post.category) {
+            var relResult = await sb.from('blog_posts')
+              .select('slug,title,excerpt,image_url,category,date,read_time')
+              .eq('published', true)
+              .eq('category', post.category)
+              .neq('slug', slug)
+              .order('date', { ascending: false })
+              .limit(3);
+
+            if (relResult.data && relResult.data.length > 0) {
+              var relEl = document.getElementById('blog-related');
+              var relHtml = '<h2>Gerelateerde artikelen</h2>';
+              relHtml += '<div class="blog-related-grid">';
+              relResult.data.forEach(function(p) {
+                var imgUrl = resolveImg(p.image_url);
+                var relImgStyle = imgUrl ? "background-image:url('" + imgUrl + "')" : '';
+                relHtml += '<a href="blog.html?post=' + p.slug + '" class="blog-card">' +
+                  '<div class="blog-card-img" style="' + relImgStyle + '">' +
+                    '<span class="blog-card-cat">' + (p.category || '') + '</span>' +
+                  '</div>' +
+                  '<div class="blog-card-body">' +
+                    '<h3>' + p.title + '</h3>' +
+                    '<p>' + (p.excerpt || '').substring(0, 100) + '...</p>' +
+                    '<div class="blog-card-meta">' + (p.date || '') + ' &middot; ' + (String(p.read_time || '5').indexOf('min') !== -1 ? String(p.read_time) : String(p.read_time || '5') + ' min') + '</div>' +
+                  '</div>' +
+                '</a>';
+              });
+              relHtml += '</div>';
+              relEl.innerHTML = relHtml;
+            }
+          }
+
+          // Scroll naar boven
+          window.scrollTo(0, 0);
+
+        } catch(e) {
+          console.error('Blog detail error:', e);
+          document.getElementById('blog-detail').querySelector('.container').innerHTML =
+            '<div class="blog-article">' +
+              '<a href="blog.html" class="blog-back">&larr; Terug naar blog</a>' +
+              '<h2>Er ging iets mis</h2>' +
+              '<p style="color:var(--text-muted);font-size:17px;">De blogpost kon niet worden geladen. Probeer het later opnieuw.</p>' +
+              '<a href="blog.html" class="btn-cta" style="margin-top:24px;display:inline-block;">Bekijk alle posts</a>' +
+            '</div>';
+        }
+      }
+
+      // ═══════════════════════════════════════════
+      // GRID VIEW (bestaande logica)
+      // ═══════════════════════════════════════════
+      async function renderGridView() {
+        try {
+          var result = await sb.from('blog_posts')
+            .select('slug,title,excerpt,image_url,category,date,read_time')
+            .eq('published', true)
+            .order('date', { ascending: false });
+          var data = result.data;
+          var error = result.error;
+          if (error) throw error;
+          if (!data || !data.length) {
+            document.getElementById('blog-grid').innerHTML = '<div style="grid-column:1/-1;text-align:center;padding:60px 0;color:var(--text-muted);">Geen blogposts gevonden.</div>';
+            return;
+          }
+
+          // Featured post (eerste)
+          var feat = data[0];
+          var featEl = document.getElementById('featured-post');
+          var featImgUrl = resolveImg(feat.image_url);
+          document.getElementById('feat-cat').textContent = feat.category || 'UITGELICHT';
+          document.getElementById('feat-title').textContent = feat.title;
+          document.getElementById('feat-excerpt').textContent = (feat.excerpt || '').substring(0, 200);
+          var featReadTime = String(feat.read_time || '5');
+          document.getElementById('feat-meta').textContent = (feat.date || '') + ' \u00b7 ' + (featReadTime.indexOf('min') !== -1 ? featReadTime : featReadTime + ' min');
+          if (featImgUrl) document.getElementById('feat-img').style.backgroundImage = "url('" + featImgUrl + "')";
+          featEl.style.display = 'block';
+          featEl.style.cursor = 'pointer';
+          featEl.onclick = function() { window.location.href = 'blog.html?post=' + feat.slug; };
+
+          // Render grid functie
+          function renderCards(posts) {
+            return posts.map(function(p, i) {
+              var imgUrl = resolveImg(p.image_url);
+              var imgStyle = imgUrl ? "background-image:url('" + imgUrl + "')" : '';
+              return '<a href="blog.html?post=' + p.slug + '" class="blog-card reveal" style="animation-delay:' + (i * 0.1) + 's">' +
+                '<div class="blog-card-img" style="' + imgStyle + '">' +
+                  '<span class="blog-card-cat">' + (p.category || '') + '</span>' +
+                '</div>' +
+                '<div class="blog-card-body">' +
+                  '<h3>' + p.title + '</h3>' +
+                  '<p>' + (p.excerpt || '').substring(0, 120) + '...</p>' +
+                  '<div class="blog-card-meta">' + (p.date || '') + ' \u00b7 ' + (String(p.read_time || '5').indexOf('min') !== -1 ? String(p.read_time) : String(p.read_time || '5') + ' min') + '</div>' +
+                '</div>' +
+              '</a>';
+            }).join('');
+          }
+
+          // Rest van de posts
+          var rest = data.slice(1);
+          var grid = document.getElementById('blog-grid');
+          if (!rest.length) {
+            grid.innerHTML = '';
+            return;
+          }
+          grid.innerHTML = renderCards(rest);
+          grid.querySelectorAll('.reveal').forEach(function(el) { revealObs.observe(el); });
+
+          // Filter knoppen
+          var filters = document.querySelectorAll('.blog-filter');
+          filters.forEach(function(btn) {
+            btn.addEventListener('click', function() {
+              filters.forEach(function(b) { b.classList.remove('active'); });
+              this.classList.add('active');
+              var cat = this.dataset.cat;
+              var filtered = cat === 'all' ? data.slice(1) : data.filter(function(p) { return p.category === cat; });
+              grid.innerHTML = renderCards(filtered);
+              if (!filtered.length) grid.innerHTML = '<div style="grid-column:1/-1;text-align:center;padding:60px 0;color:var(--text-muted);">Geen posts in deze categorie.</div>';
+              grid.querySelectorAll('.reveal').forEach(function(el) { revealObs.observe(el); });
+            });
+          });
+        } catch(e) {
+          console.error('Blog load error:', e);
+          document.getElementById('blog-grid').innerHTML = '<div style="grid-column:1/-1;text-align:center;padding:60px 0;color:var(--text-muted);">Blogposts konden niet worden geladen.</div>';
+        }
+      }
+    })();
+    });
+  </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "AI Volution Blog",
+  "description": "Inzichten over AI-automatisering voor MKB+",
+  "publisher": {
+    "@type": "Organization",
+    "name": "AI Volution",
+    "url": "https://ai-volution.nl"
+  }
+}
+</script>
+<!-- Scan Modal -->
+<div class="scan-modal-overlay" id="scanModal">
+  <div class="scan-modal">
+    <button class="scan-modal-close" onclick="closeScanModal()">&times;</button>
+    <h2>Gratis AI Strategie Scan</h2>
+    <p class="scan-subtitle">Ontdek in 30 minuten welke processen jij kunt automatiseren en hoeveel tijd en geld je bespaart.</p>
+    <iframe
+      src="https://fc.future-growth.nl/widget/form/VZKtnbuXIFCf3TvXiFGO"
+      style="width:100%;height:631px;border:none;border-radius:3px"
+      id="inline-VZKtnbuXIFCf3TvXiFGO" 
+      data-layout="{'id':'INLINE'}"
+      data-trigger-type="alwaysShow"
+      data-trigger-value=""
+      data-activation-type="alwaysActivated"
+      data-activation-value=""
+      data-deactivation-type="neverDeactivate"
+      data-deactivation-value=""
+      data-form-name="AI-ROI Scan (Simpele Scan)"
+      data-height="631"
+      data-layout-iframe-id="inline-VZKtnbuXIFCf3TvXiFGO"
+      data-form-id="VZKtnbuXIFCf3TvXiFGO"
+      title="AI-ROI Scan (Simpele Scan)"
+    ></iframe>
+      </div>
+</div>
+
+</body>
+</html>
