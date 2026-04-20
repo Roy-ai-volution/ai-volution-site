@@ -124,9 +124,80 @@ export default function BlogDetailPage() {
       <Helmet>
         <title>{post.title} | AI Volution Blog</title>
         {post.meta_description && <meta name="description" content={post.meta_description} />}
+        {post.focus_keyword && <meta name="keywords" content={[post.focus_keyword, ...(post.tags || [])].join(', ')} />}
+        <link rel="canonical" href={`https://ai-volution.nl/blog/${post.slug}`} />
+        <meta name="robots" content="index, follow, max-image-preview:large" />
+
+        <meta property="og:type" content="article" />
         <meta property="og:title" content={`${post.title} | AI Volution Blog`} />
         {post.meta_description && <meta property="og:description" content={post.meta_description} />}
         {heroImg && <meta property="og:image" content={heroImg} />}
+        <meta property="og:url" content={`https://ai-volution.nl/blog/${post.slug}`} />
+        <meta property="og:site_name" content="AI-Volution" />
+        <meta property="og:locale" content="nl_NL" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={`${post.title} | AI-Volution`} />
+        {post.meta_description && <meta name="twitter:description" content={post.meta_description} />}
+        {heroImg && <meta name="twitter:image" content={heroImg} />}
+
+        <meta property="article:published_time" content={post.date || ''} />
+        {post.author_name && <meta property="article:author" content={post.author_name} />}
+        {post.category && <meta property="article:section" content={post.category} />}
+        {post.tags && post.tags.map((tag: string) => (
+          <meta key={tag} property="article:tag" content={tag} />
+        ))}
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "headline": post.title,
+            "description": post.meta_description || post.excerpt,
+            "image": heroImg ? [heroImg] : undefined,
+            "datePublished": post.date,
+            "dateModified": post.updated_at || post.date,
+            "author": {
+              "@type": "Person",
+              "name": post.author_name || "Roy Fernandes",
+              "jobTitle": post.author_title || "Oprichter AI-Volution",
+              "url": "https://ai-volution.nl"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "AI-Volution",
+              "url": "https://ai-volution.nl",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://ai-volution.nl/logo.png"
+              }
+            },
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": `https://ai-volution.nl/blog/${post.slug}`
+            },
+            "keywords": [post.focus_keyword, ...(post.tags || [])].filter(Boolean).join(', '),
+            "articleSection": post.category,
+            "inLanguage": "nl-NL"
+          })}
+        </script>
+
+        {post.faq && post.faq.length > 0 && (
+          <script type="application/ld+json">
+            {JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "mainEntity": post.faq.map((item: {question: string; answer: string}) => ({
+                "@type": "Question",
+                "name": item.question,
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": item.answer
+                }
+              }))
+            })}
+          </script>
+        )}
       </Helmet>
 
       <div style={{ paddingTop: '100px' }}>
