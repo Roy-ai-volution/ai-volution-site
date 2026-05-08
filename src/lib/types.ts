@@ -16,4 +16,5 @@ export interface BlogPost {
   focus_keyword: string | null
   tags: string[] | null
   faq: Array<{ question: string; answer: string }> | null
+  updated_at: string | null
 }
